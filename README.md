@@ -14,15 +14,7 @@ Data is replicated in **near real time** using **rclone**, a cloud-agnostic data
 
 ## Architecture Overview
 
-OCI Object Storage (Standard)
-       ↓
-rclone (Continuous sync every 30–60 seconds)
-       ↓
-Amazon S3 (Standard / Infrequent Access)
-       ↓
-Lifecycle Policy (30–90 days)
-       ↓
-Amazon Glacier (Archive)
+OCI Object Storage (Standard) -> rclone (Continuous sync every 30–60 seconds) -> Amazon S3 (Standard / Infrequent Access) -> Lifecycle Policy (30–90 days) -> Amazon Glacier (Archive)
 
 # Quick Start
 
